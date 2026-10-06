@@ -1,12 +1,14 @@
 class Solution {
     public void reverseArray(int arr[]) {
         int n = arr.length;
-        ArrayList<Integer>ans= new ArrayList<>();
-        for (int i = n - 1; i >= 0; i--) {
-            ans.add(arr[i]);
+        int i = 0 , j = n - 1 ;
+        while(i<j){
+            int temp = arr[i] ;
+            arr[i] = arr[j];
+            arr[j] = temp;
+            
+            i++;
+            j--;
         }
-        for (int i = 0; i < n; i++) {
-                    arr[i] = ans.get(i);
-                }
     }
 }
