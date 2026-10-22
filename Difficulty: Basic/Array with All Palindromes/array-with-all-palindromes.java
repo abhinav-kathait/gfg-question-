@@ -1,15 +1,14 @@
 class Solution {
     public static boolean isPalinArray(int[] arr) {
-        int n = arr.length;
-        for(int i = 0 ; i < n ; i++){
-            int temp = arr[i];
-            int x = 0 ;
-            while(temp!=0){
-                x = x*10 + (temp%10);
-               temp = temp / 10;
-            }
-            if(arr[i]!=x) return false ;
-        }
-        return true;
+      for(int i = 0 ; i < arr.length ; i++){
+          int num = arr[i];
+          int x = 0 ; 
+          while(num != 0 ){
+              x  = x * 10 + (num % 10);
+              num = num / 10;
+          }
+          if(x!=arr[i]) return false ;
+      }
+      return true;
     }
 }
